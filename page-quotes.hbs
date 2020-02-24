@@ -1,0 +1,44 @@
+{{!< default}}
+{{> header}}
+
+{{#post}}
+<main>
+
+    <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
+
+        <header class="post-full-header">
+            <h1 class="post-full-title"><a href={{url}}>{{title}}</a></h1>
+        </header>
+        {{#if feature_image}}
+        <figure class="post-full-image" style="background-image: url({{feature_image}})">
+        </figure>
+        {{/if}}
+
+        <section class="post-full-content">
+            <div class="post-content recommended-desc">
+                {{content}}
+            </div>
+        </section>
+
+
+        <section class="quotes">
+            {{#get "posts" include="tags" limit="all"}}
+            {{#foreach posts}}
+            {{#has tag="Quote"}}
+            <a href="{{url}}" class="quote-link">
+                <blockquote class="quote">
+                    <span class="quote-content">
+                        <i class="fas fa-quote-left quote-left"></i>
+                        {{excerpt}}
+                        <i class="fas fa-quote-right quote-right"></i>
+                    </span>
+                    <h6 class="quote-author">{{tags from="2" to="2"}}</h6>
+                </blockquote>
+            </a>
+            {{/has}}
+            {{/foreach}}
+            {{/get}}
+        </section>
+    </article>
+</main>
+{{/post}}

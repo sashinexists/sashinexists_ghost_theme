@@ -1,0 +1,103 @@
+.books {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin:0;
+    padding: 2rem 0;
+    list-style-type: none;
+    background: darken($eerie-black, 2.5%);
+    border-radius: 1rem;
+}
+
+.books-recommended {
+    @extend .books;
+}
+
+.book {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 20rem;
+    color: inherit;
+    background: lighten($eerie-black, 3%);
+    transition: .3s;
+}
+
+.book-full {
+    @extend .post-full;
+}
+
+.book-full-header {
+    @extend .post-full-header;
+    margin-bottom: 2.4rem;
+}
+
+.book-full-title {
+    @extend .post-full-title;
+    color: inherit;
+}
+
+.book-icon {
+    font-size: 2rem;
+}
+
+.book-list-item:nth-of-type(odd) {
+    background: darken($eerie-black, 5%);
+
+}
+
+.book-list-item:nth-of-type(even) {
+    background: darken($eerie-black, 2.5%);
+}
+
+.book:hover {
+    background: lighten($eerie-black, 5%);
+    color: inherit;
+}
+
+img.book-cover{
+    display: block;
+    margin: 0;
+    border-radius: 0;
+    height: 18rem;
+    width: 20rem;
+}
+
+.book-information {
+    display: block;
+    padding: 3rem;
+    float: right;
+}
+
+.book-title, .book-search-title {
+    @extend .post-full-title
+}
+
+.book-author {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.book-google-info {
+    @extend .read-article;
+    float: right;
+}
+
+.book-search-display {
+    @extend .book;
+    min-height: 0;
+    background:none;
+}
+
+span.book.book-search-result{
+    background: none;
+}
+
+.book-search-display:hover {
+    background: inherit;
+}

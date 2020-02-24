@@ -1,0 +1,88 @@
+.quote-link {
+    color: inherit;
+}
+
+.quote-link:hover {
+    color: inherit;
+}
+
+.quote {
+    min-height: 30rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+    padding: 2rem;
+    background: lighten($eerie-black, 2.5%);
+}
+
+.quotes > .quote {
+    transition: .3s;
+    &:hover {
+        background: lighten($eerie-black, 5%);
+    }
+}
+
+.quote-search-preview {
+    @extend .quote;
+    padding: 0;
+    margin: 0;
+    background: inherit;
+    min-height: inherit;
+}
+
+.quote-search-preview:hover {
+    background: inherit;
+}
+
+
+.quote-full {
+    @extend .book-full;
+
+}
+
+.quote-full-header {
+    @extend .book-full-header;
+}
+
+.quote-full-title {
+    @extend .book-full-title;
+}
+
+
+.quote-content{
+    min-height: 20rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.quote-left {
+    align-self: flex-start;
+}
+
+.quote-right {
+    align-self: flex-end;
+}
+
+.quote-author > a {
+    color: inherit;
+}
+
+.quote-author > a:hover {
+    color: $platinum;
+}
+
+.quote-icon {
+    @extend .book-icon;
+}
+
+.quote-preview {
+    @extend .book-preview;
+    color: inherit;
+}
+
+.quote-preview-link {
+    @extend .book-preview-link;
+}
